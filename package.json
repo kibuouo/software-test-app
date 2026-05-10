@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "patch:vite": "node scripts/patch-vite.js",
+    "start": "npm run build && node scripts/serve-dist.cjs --open",
+    "open": "npm run build && node scripts/open-dist.cjs",
+    "dev": "npm run build && npm run preview",
+    "build": "node scripts/patch-vite.js && vite build --minify false --target esnext --base ./",
+    "preview": "node scripts/patch-vite.js && vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "vite": "^4.5.14",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {}
+}
